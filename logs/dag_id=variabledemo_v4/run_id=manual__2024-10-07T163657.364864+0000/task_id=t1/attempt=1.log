@@ -1,0 +1,21 @@
+[2024-10-07T16:36:59.491+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-07T16:36:59.510+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: variabledemo_v4.t1 manual__2024-10-07T16:36:57.364864+00:00 [queued]>
+[2024-10-07T16:36:59.520+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: variabledemo_v4.t1 manual__2024-10-07T16:36:57.364864+00:00 [queued]>
+[2024-10-07T16:36:59.521+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2024-10-07T16:36:59.535+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): t1> on 2024-10-07 16:36:57.364864+00:00
+[2024-10-07T16:36:59.541+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1465) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T16:36:59.543+0000] {standard_task_runner.py:72} INFO - Started process 1466 to run task
+[2024-10-07T16:36:59.543+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'variabledemo_v4', 't1', 'manual__2024-10-07T16:36:57.364864+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/variablepython.py', '--cfg-path', '/tmp/tmpifofyx4l']
+[2024-10-07T16:36:59.544+0000] {standard_task_runner.py:105} INFO - Job 30: Subtask t1
+[2024-10-07T16:36:59.590+0000] {task_command.py:467} INFO - Running <TaskInstance: variabledemo_v4.t1 manual__2024-10-07T16:36:57.364864+00:00 [running]> on host 7494ebf6a940
+[2024-10-07T16:36:59.653+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='variabledemo_v4' AIRFLOW_CTX_TASK_ID='t1' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T16:36:57.364864+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-07T16:36:57.364864+00:00'
+[2024-10-07T16:36:59.655+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-07T16:36:59.692+0000] {logging_mixin.py:190} INFO - Hi my name is Zainab Badshah and age is 26
+[2024-10-07T16:36:59.693+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-07T16:36:59.702+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-07T16:36:59.704+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=variabledemo_v4, task_id=t1, run_id=manual__2024-10-07T16:36:57.364864+00:00, execution_date=20241007T163657, start_date=20241007T163659, end_date=20241007T163659
+[2024-10-07T16:36:59.719+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-07T16:36:59.733+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T16:36:59.737+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,24 @@
+[2024-10-13T11:13:38.303+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-13T11:13:38.319+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: SmarttKeyData_v2.Task1 manual__2024-10-13T11:13:37.309699+00:00 [queued]>
+[2024-10-13T11:13:38.326+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: SmarttKeyData_v2.Task1 manual__2024-10-13T11:13:37.309699+00:00 [queued]>
+[2024-10-13T11:13:38.328+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 3
+[2024-10-13T11:13:38.340+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): Task1> on 2024-10-13 11:13:37.309699+00:00
+[2024-10-13T11:13:38.346+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=207) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-13T11:13:38.348+0000] {standard_task_runner.py:72} INFO - Started process 209 to run task
+[2024-10-13T11:13:38.348+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'SmarttKeyData_v2', 'Task1', 'manual__2024-10-13T11:13:37.309699+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/smart_key.py', '--cfg-path', '/tmp/tmpoe8ws6nn']
+[2024-10-13T11:13:38.350+0000] {standard_task_runner.py:105} INFO - Job 90: Subtask Task1
+[2024-10-13T11:13:38.392+0000] {task_command.py:467} INFO - Running <TaskInstance: SmarttKeyData_v2.Task1 manual__2024-10-13T11:13:37.309699+00:00 [running]> on host 1064a88d81e5
+[2024-10-13T11:13:38.605+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='SmarttKeyData_v2' AIRFLOW_CTX_TASK_ID='Task1' AIRFLOW_CTX_EXECUTION_DATE='2024-10-13T11:13:37.309699+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-13T11:13:37.309699+00:00'
+[2024-10-13T11:13:38.606+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-13T11:13:38.616+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-10-13T11:13:38.618+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'shasum /opt/***/filestorage/customer.csv']
+[2024-10-13T11:13:38.626+0000] {subprocess.py:86} INFO - Output:
+[2024-10-13T11:13:38.649+0000] {subprocess.py:93} INFO - aa42781125a5f6b9f230fb853cfd971c3ca6305f  /opt/***/filestorage/customer.csv
+[2024-10-13T11:13:38.650+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-10-13T11:13:38.673+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-13T11:13:38.675+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=SmarttKeyData_v2, task_id=Task1, run_id=manual__2024-10-13T11:13:37.309699+00:00, execution_date=20241013T111337, start_date=20241013T111338, end_date=20241013T111338
+[2024-10-13T11:13:38.725+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-13T11:13:38.748+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-13T11:13:38.750+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
